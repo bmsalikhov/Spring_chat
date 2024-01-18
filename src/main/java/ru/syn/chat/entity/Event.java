@@ -14,7 +14,7 @@ public class Event {
     }
 
     private static AtomicInteger ID_GENERATOR = new AtomicInteger(0);
-    private Type type;
+    private static Type type;
     private final int id;
     private Payload payload;
     private final long timestamp;
@@ -49,5 +49,7 @@ public class Event {
         return getPayload().getUser();
     }
 
-    //TODO: make EventBuilder
+    public static EventBuilder type(Type type) {
+        return new EventBuilder().type(type);
+    }
 }

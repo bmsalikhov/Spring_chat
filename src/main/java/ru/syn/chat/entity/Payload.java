@@ -18,7 +18,7 @@ public class Payload {
     }
 
     @JsonCreator
-    private Payload(@JsonProperty("user") User user) {
+    public Payload(@JsonProperty("user") User user) {
         this.user = user;
     }
 
